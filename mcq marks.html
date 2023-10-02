@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View MCQ Test Marks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <style>
+        #i1{
+            background-color:#386B8C;
+            height: 13vh;
+        }
+        #i2{
+            background-color:#F5FFD0;
+            height: 10.5vh;
+        }
+        #link{
+            text-align: center;
+            text-decoration: underline;
+        }
+        #i3{
+            border:1px solid #f2f2f2;
+            width: 46vw;
+            height: 38vh;
+            border-radius: 1%;
+        }
+        #i4{
+            margin-left: 120px;
+        }
+        select{
+            display: inline-block;
+            box-sizing: border-box; 
+            border: 1px solid #ccc; 
+            margin: 8px 0; 
+            padding: 7px 20px;
+            border-radius: 4px;
+            width: 33vw;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="i1">
+        <div class="nav">
+            <a href="#"><img src="https://media.collegedekho.com/media/img/institute/logo/VIT_Chennai_logo.png" width="200" height="70"/></a>
+            <a href="#"><b class="navbar-brand text-white" style=" font-size: larger;margin-left: 15px; margin-top: 15px;">Vellore Institute of Technology</b></a>
+            <a href="#" class="nav-link text-white" style="margin-left: 10px; margin-top: 15px;">Login</a>
+            <a href="#" class="nav-link text-white" style="margin-top: 15px;">Features</a>
+            <a href="#" class="nav-link text-white" style="margin-top: 15px;">Contact</a>   
+        </div>         
+    </nav>
+    <nav class="navbar" id="i2">
+        <div class="nav" id="i4">
+            <a href="vlogin.html" class="nav-link" style="margin-top: 7px; color: black;"><h6>Home</h6></a>
+            <div class="dropdown">
+                <button class="btn btn " type="button" data-toggle="dropdown"  style="margin-top: 8px; ">
+                    <h6>Attend a Test&ensp;<i class="fa fa-caret-down"></i></h6>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="mcq.html" style="color: white;"><h6 style="color: black;">&emsp;MCQ Test</h6></a></li>
+                  <li><a href="programming test.html" style="color: white;"><h6 style="color: black;">&emsp;Programming Test</h6></a></li>
+                </ul>
+            </div>
+            <a href="#" class="nav-link" style="margin-top: 7px; color: black;"><h6>Profile</h6></a>
+            <div class="dropdown">
+                <button class="btn btn " type="button" data-toggle="dropdown"  style="margin-top: 9px; ">
+                    <h6>View Marks&ensp;<i class="fa fa-caret-down"></i></h6>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="mcq marks.html" style="color: white;"><h6 style="color: black;">&emsp;MCQ Test</h6></a></li>
+                  <li><a href="#" style="color: white;"><h6 style="color: black;">&emsp;Programming Test</h6></a></li>
+                </ul>
+            </div>
+            <a href="logout.html" class="nav-link" style="margin-top: 7px; color: black;"><h6>Logout</h6></a>
+        </div>
+    </nav>
+    <br/><br/>
+    <h5 style="color: blue; text-align: center;">View MCQ Test Marks</h5>
+    <br/>
+    <form id="f">
+        <table>
+            <tr>
+                <td>
+                    <h6 style="margin-left: 125px;">Course Code</h6>
+                    <div>
+                        <form id="form1">
+                            <select onclick="colorchange1()" id="opt1" style="margin-left: 125px; width: 33vw; color:dimgrey;">
+                                <option  value="">Select a course</option>
+                                <option value="1">CSE1002</option>
+                            </select>
+                            <br/><br/><br/>
+                            <button type="submit" onclick="func1()" style="margin-left: 125px;" class="btn btn-success">Show</button>
+                        </form>
+                    </div>
+                </td>
+                <td>
+                    <h6 style="margin-left: 30px;">Test</h6>
+                    <div>
+                        <form id="form1">
+                            <select onclick="colorchange2()" id="opt2" style="margin-left: 30px; width: 46vw; color:dimgrey;">
+                                <option value="">Select a MCQ Test</option>
+                                <option value="1">quiz 1</option>
+                                <option value="2">quiz 2</option>
+                                <option value="3">quiz 3</option>
+                            </select>
+                            <br/><br/><br/>
+                            <button type="reset" id="ok" style="margin-left: 220px;" class="btn btn-danger">Cancel</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <h4 id="ans" style="margin-left: 125px; color: lightgreen;"></h4>
+    </form>
+    <script>
+        var a=0,b=0;
+        function colorchange1()
+        {
+            document.getElementById("opt1").style.borderColor="#007bff";
+        }
+        function colorchange2()
+        {
+            document.getElementById("opt2").style.borderColor="#007bff";
+        }
+        function func1()
+        {
+            var p=document.getElementById("opt1");
+            var e=p.value;
+            if (e=="")
+            {
+                alert("Select all the values");
+            }
+            else
+            {
+                a=1;
+                var l=document.getElementById("opt2");
+                var d=l.value;
+                if(d=="")
+                {
+                    alert("Select all the values");
+                }
+                else if(d=="1")
+                {
+                    document.getElementById("ans").innerHTML="Your score for the selected test is -69.";
+                }
+                else if(d=="2")
+                {
+                    document.getElementById("ans").innerHTML="Your score for the selected test is 10.";
+                }
+                else if (d=="3")
+                {
+                    document.getElementById("ans").innerHTML="This test has not been evaluated."
+                }
+            }
+        }
+    </script>
+</body>
+</html>
