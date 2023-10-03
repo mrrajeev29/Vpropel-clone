@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attend Programming Test</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        #i1{
+            background-color:#386B8C;
+            height: 15vh;
+        }
+        #i2{
+            background-color: #f0f0f0;
+            height: 90%;
+            margin-left: 40px;
+            width: 68%;
+            margin-right: 10px;
+        }
+        #i3{
+            border: 1px solid #f0f0f0;
+            margin-left:78%;
+            margin-top: -62%;
+            height: 20%;
+        }
+    </style>
+    <script src=”https://www.jdoodle.com/assets/jdoodle-pym.min.js” type=”text/javascript”></script>
+
+</head>
+<body>
+    <nav class="navbar" id="i1">
+        <table>
+            <tr>
+                <td>
+                    <div class="nav">
+                        <a href="#"><img src="https://media.collegedekho.com/media/img/institute/logo/VIT_Chennai_logo.png" width="200" height="70"/></a>
+                    </div>       
+                </td>
+                <td><h2 style="color: white; margin-left: 190px;">Vellore Institute of Technology</h2></td>
+                <td>
+                    <p style="color: greenyellow; margin-left: 190px;">Name: <b>Aman Prasad</b></p>
+             
+                    <p style="color: greenyellow; margin-left: 190px;">Registration Number: <b>21BCE5816</b></p>
+                </td>
+            </tr>
+        </table>
+    </nav>
+                <div id="i2" >
+                    <h4 style="margin-left: 30px;">Maximum Z-Sum</h4>  
+                    <br/>  
+                    <p style="margin-left: 30px;" >Z-Sum(i,j) in a matrix M is defined as the sum of the elements in matrix M at positions (i, j), (i, j+1), (i+1, j), (i+1, j+1).
+                        <br/>Z-Sum(1,1) of the matrix shown in the figure is a11+a12+a21+a22.<br/>
+                        <br/>
+                        Given a mXn matrix, value of i and j, write a C program to find the maximum Z-Sum in the matrix. 
+                        <br/>Print the elements that form Z-structure in order that is print elements at positions (i, j), (i, j+1), (i+1, j), (i+1, j+1). 
+                        <br/>And also print all the positions i,j of the matrix that corressponds to maximum Z-Sum. 
+                        <br/>
+                        <br/>For example, given a 3X3 matrix as shown below:<br/>
+                        1 2 3<br/>
+                        2 4 7<br/>
+                        1 2 3<br/><br/>
+                        The maximum z-sum is 16, the z-structures start with elements in position 1, 2 and 2, 2, the elements that is on the 
+                        <br/>maximum z-structures are 2 3 4 7 and 4 7 2 3.<br/><br/>
+                        Input Format<br/><br/>
+                        First line contains the number of rows in the matrix m, r<br/>
+                        Next line contains the number of columns in the matrix m, c<br/>
+                        Next r lines contain the elements of the matrix, one line has the elements of one row and the elements 
+                        <br/>in each column is separated by a space.<br/><br/>
+                        Output Format<br/><br/>
+                        In the first line, print the maximum z sum<br/>         
+                        In the next 2*m lines, print the position of first element of Z-structure that has maximum z sum followed
+                        <br/>the elements in the Z-structure with maximum sum in the next line,where ‘m’ is the number of z-structures<br/>with maximum z sum         
+                        The position of first element of Z-structure with maximum sum and elements in the Z-structure<br/>with maximum sum has to be separated by a tab space.<br/><br/>Print the elements in the Z-structure in such a way that Z shape is formed when traversed.
+                        <br/><br/>
+                    </p>
+                </div>
+            <form action="#">
+                <div id="i3">
+                    <h4>&emsp;Leaderboard</h4>
+                    <hr/>
+                    <h6>&emsp;&emsp;<b>Solved by: </b>25</h6>
+                    <hr/>
+                    <button type="submit" class="btn btn-info" style="margin-left: 60px;">&emsp;&emsp;Leaderboard&emsp;&emsp;</button>
+                    <br/>
+                    <br/>
+                </div>
+            </form>
+        <br/>
+        <br/>
+        <div>
+            <iframe src="https://trinket.io/embed/python/edd948bf08" width="68%" height="356" style="margin-left: 40px; margin-top: 44%;"></iframe>    
+        </div>
+</body>
+</html>
